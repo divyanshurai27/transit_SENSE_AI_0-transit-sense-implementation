@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.8s ease-out forwards;
+}
+
+.animate-fade-rise-delay {
+  animation: fade-rise 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fade-rise 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 210 25% 8%;
+
+    --card: 210 40% 97%;
+    --card-foreground: 210 25% 8%;
+
+    --popover: 210 40% 97%;
+    --popover-foreground: 210 25% 8%;
+
+    --primary: 200 80% 45%;
+    --primary-foreground: 200 95% 98%;
+
+    --secondary: 210 30% 92%;
+    --secondary-foreground: 210 25% 15%;
+
+    --muted: 210 25% 93%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 25 80% 55%;
+    --accent-foreground: 25 95% 98%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 200 80% 45%;
+
+    --radius: 0.75rem;
+
+    --festive-gold: 42 85% 55%;
+    --festive-gold-foreground: 42 90% 15%;
+    --festive-teal: 200 70% 45%;
+    --festive-teal-foreground: 200 85% 98%;
+    --festive-rose: 350 55% 58%;
+    --festive-rose-foreground: 350 80% 97%;
+    --festive-amber: 28 80% 52%;
+    --festive-amber-foreground: 28 90% 97%;
+
+    --sidebar-background: 210 40% 97%;
+    --sidebar-foreground: 210 20% 30%;
+    --sidebar-primary: 200 80% 45%;
+    --sidebar-primary-foreground: 200 95% 98%;
+    --sidebar-accent: 210 30% 92%;
+    --sidebar-accent-foreground: 210 25% 15%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 200 80% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
